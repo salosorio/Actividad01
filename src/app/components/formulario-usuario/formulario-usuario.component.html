@@ -1,0 +1,55 @@
+
+
+<h4>Formulario de usuario</h4>
+
+<div class=" mb-3 row " >
+    
+
+        <!--enlace la ref de ngForm a la variable que estoy creando-->
+      <form >  
+            
+            
+          <!--campo de nombre-->
+          <div class="mb-3" row>
+              <label class="col-sm-3 col-form-label">Nombre</label>
+              <div class="col-sm-9">
+                  <input type="text" class="form-control" [(ngModel)] name="nombre" placeholder="Nombre">  
+                   <!--no tiene que ver con label, pero si quiero sea conocido en el formulario como el valor que va tener nmbre -->
+                  <span class="form-text text-danger">Solo letras, nada de caracteres ni números</span>
+              </div>
+          </div>
+
+          <!--campo de num apellido-->
+          <div class="mb-3" row>
+            <label class="col-sm-3 col-form-label">Apellido</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" [(ngModel)] name="apellido" placeholder="Apellido">
+                <span class="form-text text-danger">Solo letras, nada de caracteres ni números</span>
+            </div>
+        </div>
+
+        <!--campo de # identificación-->
+        <div class="mb-3" row>
+            <label class="col-sm-3 col-form-label">Nro Identificación</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" placeholder="Nro Identificación"
+                [(ngModel)] name="identificacion">
+                
+            </div>
+        </div>
+
+        <!--campo de edad-->
+        <div class="mb-3" row>
+            <label class="col-sm-3 col-form-label">Edad</label>
+            <div class="col-sm-9">
+                <input type="number" class="form-control" placeholder="Edad"
+                [(ngModel)] name="edad">
+                
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="onClickSubmit()">Submit</button>
+        <button type="button" class="btn btn-secondary"(click)="buscar(item)">Consultar</button>
+      </form>
+
+    </div>
